@@ -1,0 +1,152 @@
+* {
+margin: 0;
+padding: 0;
+}
+body {
+font: 10%/1.5 Verdana, Sans-Serif;
+background: #eee;
+}
+#container {
+margin: 100px auto;
+width: 185.76px;
+height: 300px;
+background-image: url("watch.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100% 100%;
+position: relative;
+}
+#keyboarddd {
+    position: absolute;
+    bottom: 63px;
+   
+}
+#write {
+margin: 0 2px 2px 22px;
+padding: 5px;
+width: 127px;
+height: 10px;
+font: 1em/1.5 Verdana, Sans-Serif;
+background: #fff;
+border: 1px solid #DFDFE1;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+
+}
+
+/*#Keyboard {
+    background-color: #DADFE3;
+    height: 100px;
+    width: 500px;
+    border: solid;
+    margin-top: 100;
+}*/
+
+#keyboard {
+margin: 0 26px 0 22px;
+padding: 0;
+list-style: none;
+background-color: #DADFE3;
+height: 65px;
+    margin-bottom: 0;
+}
+    #keyboard li {
+    float: left;
+    margin: 0 0 3px 0;
+    width: 11.55px;
+    height: 11.55px;
+    line-height: 11.55px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #DFDFE1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+
+    }
+    #keyboard li.a {
+        margin: 0 1px 3px 0;
+    }
+    #keyboard li.z {
+        margin: 0 0 3px 5px;
+    }
+        .firstLetter {
+        /*clear: left;*/
+        margin-left: 3px;
+        }
+        #keyboard .left-shift {
+            width: 16.94px;
+            clear: left;
+            margin-left: 3px;
+            }
+        #keyboard .return {
+            width: 24.64px;
+            margin-right: 0;
+            }
+        .lastitem {
+        margin-right: 0;
+        }
+        .uppercase {
+        text-transform: uppercase;
+        }
+        #keyboard .space {
+        width: 77px;
+        margin-left: 5px;
+        margin-right: 5px;
+        }
+        .on {
+        display: none;
+        }
+        #keyboard li:hover {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        border-color: #e5e5e5;
+        cursor: pointer;
+        }
+
+.tooltip {
+    border-style: solid;
+    border-radius: 10px;
+    height: 80px;
+    width: 65px;
+    z-index: 9999;
+    background-color: white;
+    display: inline-block;
+}
+.up {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: small;
+
+}
+.middle {
+    background-color: #b4acac;
+    border: solid;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin: auto;
+    font-size: large;
+}
+.down {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: small;
+
+}
+.right {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: small;
+}
+.left {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: small;
+}
+

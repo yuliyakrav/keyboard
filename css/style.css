@@ -16,6 +16,17 @@ background-position: center;
 background-size: 100% 100%;
 position: relative;
 }
+.phrase-box {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.phrase {
+    font-size: 22px;
+}
+h2 {
+    font-size: 22px;
+}
 #keyboarddd {
     position: absolute;
     bottom: 63px;

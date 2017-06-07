@@ -37,13 +37,13 @@ margin: 0 2px 2px 22px;
 padding: 5px;
 width: 127px;
 height: 10px;
-font: 1em/1.5 Verdana, Sans-Serif;
+font: 8em Verdana, Sans-Serif;
 background: #fff;
 border: 1px solid #DFDFE1;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
-
 }
+
 
 /*#Keyboard {
     background-color: #DADFE3;
@@ -72,6 +72,7 @@ height: 65px;
     border: 1px solid #DFDFE1;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    font-size: small;
 
     }
     #keyboard li.a {
@@ -85,12 +86,12 @@ height: 65px;
         margin-left: 3px;
         }
         #keyboard .left-shift {
-            width: 16.94px;
+            width: 2.5em;
             clear: left;
             margin-left: 3px;
             }
         #keyboard .return {
-            width: 24.64px;
+            width: 3em;
             margin-right: 0;
             }
         .lastitem {
@@ -100,7 +101,7 @@ height: 65px;
         text-transform: uppercase;
         }
         #keyboard .space {
-        width: 77px;
+        width: 3.6em;
         margin-left: 5px;
         margin-right: 5px;
         }
@@ -160,4 +161,3 @@ height: 65px;
     text-align: center;
     font-size: small;
 }
-

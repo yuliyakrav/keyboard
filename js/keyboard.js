@@ -442,10 +442,8 @@ mc.on("pandown", function(ev) { // pandown on keyboard = removes uppercase
 $('.letter' || '.special').hover(
   function() {
         var onLetter = $(this).text(); //changed
-        //  console.log(onLetter);              //changed
         createTooltip(event, onLetter);
   }, function() {
-    console.log("hello");
     $( "table" ).remove();
   }
 );
@@ -493,13 +491,6 @@ function positionTooltip(event) {
 
 };
 
-
-// $(function(){
-// var $write = $('#write'),
-//     shift = false,
-//     capslock = false;
-
-// });
 
 function generatePhrases() {
     // initialize the list of phrases
@@ -767,8 +758,10 @@ $(document).ready(function() {
 
         // Add the character
         var text = $('#write').val();
-        appendEntry(phraseCounter, character);
-        $("#write").val(text + character);
+        if (character.charCodeAt(0) != 10) {
+           appendEntry(phraseCounter, character);
+           $("#write").val(text + character);
+       }       
         $("input").focus();
     });
 
@@ -796,7 +789,7 @@ $(document).ready(function() {
             // decrement the entry counter
             ENTRY_COUNTER--;
         }
-        console.log(USER_DATA);
+
         // update number of entries
         $(CURRENT_TRIAL).attr("entries", ENTRY_COUNTER);
 

@@ -719,7 +719,7 @@ function appendTranscribed(counter) {
     var transcribedPhrase = USER_DATA.createElement("Transcribed");
 
     // grab the input, excluding any whitespace at end of phrase
-    transcribedPhrase.textContent = $("input").val().trim();
+    transcribedPhrase.textContent = $("input").val();
 
     // append the transcribed phrase element
     USER_DATA.getElementsByTagName("Trial")[counter].appendChild(transcribedPhrase);

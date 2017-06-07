@@ -437,11 +437,39 @@ mc.on("pandown", function(ev) { // pandown on keyboard = removes uppercase
     return false;
 });
 
+/*
+mc.on("panleft", function(ev) {                                     // pandown on keyboard = removes uppercase
+ //   myElement.textContent = ev.type +" = delete";
+    //var html = $write.html();
+    var text = $('#write').val();
+    appendEntry(phraseCounter, character);
+    $("#write").val(text + character);
 
+            $write.html(html.substr(0, html.length - 1));
+            return false;
+});
+*/
+
+// $('.special').hover(function(event){
+//  var onLetter = $( this ).text();   //changed
+
+// function createTooltip(){  
+// var tip = $('<table class="tooltip"><tr><td></td><td class="up"></td><td></td></tr><tr><td class="left"></td><td class="middle"></td><td class="right"></td></tr><tr><td></td><td class="down"></td><td></td></tr></table>');
+// if (shift == false){
+//     letter = letterString.charAt(0);
+//     $(tip).appendTo('body');
+//     $('.middle').text(onLetter);
+//     $('.up').text(letters[letter]['up']);
+//     $('.down').text(letters[letter]['down']);
+//     $('.left').text(letters[letter]['left']);
+//     $('.right').text(letters[letter]['right']);
+// }
+// })
 
 $('.letter' || '.special').hover(
   function() {
         var onLetter = $(this).text(); //changed
+        //  console.log(onLetter);              //changed
         createTooltip(event, onLetter);
   }, function() {
     $( "table" ).remove();
@@ -453,6 +481,16 @@ function createTooltip(event, letter) {
     var letterString = letter;
 
     var tip = $('<table class="tooltip"><tr><td></td><td class="up"></td><td></td></tr><tr><td class="left"></td><td class="middle"></td><td class="right"></td></tr><tr><td></td><td class="down"></td><td></td></tr></table>');
+
+    // if(shift = false && letterString !== '123' && letterString != 'space' && letterString != 'return') {
+    //     console.log("special key");
+    //     $(tip).appendTo('body');
+    //     $('.middle').text(letter);
+    //     $('.up').text(special[letter]['up']);
+    //     $('.down').text(special[letter]['down']);
+    //     $('.left').text(special[letter]['left']);
+    //     $('.right').text(special[letter]['right']);
+    // }
 
 
     if (shift == false) {
@@ -491,6 +529,13 @@ function positionTooltip(event) {
 
 };
 
+
+// $(function(){
+// var $write = $('#write'),
+//     shift = false,
+//     capslock = false;
+
+// });
 
 function generatePhrases() {
     // initialize the list of phrases
@@ -756,12 +801,18 @@ $(document).ready(function() {
         // Uppercase letter
         if ($this.hasClass('uppercase')) character = character.toUpperCase();
 
+        // Remove shift once a key is clicked.
+        // if (shift === true) {
+        //     $('.symbol span').toggle();
+        //     if (capslock === false) $('.letter').toggleClass('uppercase');
+
+        //     shift = false;
+        // }
+
         // Add the character
         var text = $('#write').val();
-        if (character.charCodeAt(0) != 10) {
-           appendEntry(phraseCounter, character);
-           $("#write").val(text + character);
-       }       
+        appendEntry(phraseCounter, character);
+        $("#write").val(text + character);
         $("input").focus();
     });
 
@@ -782,16 +833,13 @@ $(document).ready(function() {
 
     $(".return").click(function() {
 
-        while (USER_DATA.getElementsByTagName("Trial")[phraseCounter].lastChild.getAttribute("char") === " ") {
-            // remove that entry with whitespace
+        if (ENTRY_COUNTER > 0) {
             USER_DATA.getElementsByTagName("Trial")[phraseCounter].lastChild.remove();
-
-            // decrement the entry counter
             ENTRY_COUNTER--;
+            // update number of entries
+            $(CURRENT_TRIAL).attr("entries", ENTRY_COUNTER);
         }
 
-        // update number of entries
-        $(CURRENT_TRIAL).attr("entries", ENTRY_COUNTER);
 
         // append the transcribed phrase to XML
         appendTranscribed(phraseCounter);

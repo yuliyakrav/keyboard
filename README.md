@@ -8,13 +8,17 @@ To test Magniboard, you will be presented with 45 phrases to transcribe. Once al
 
 # How to use Magniboard
 
-Using Magniboard is very simple. As soon as a user touches the keyboard, a enlarged tooltip appears above their finger displaying which character they are currently on, and what characters are surrounding it. The user is able to adjust their finger accordingly to their desired character while the tooltip adjusts to their position. To select and input the character, the user simply lifts their finger off the screen when they reach their desired character. 
+Using Magniboard is very simple. As soon as a user touches the keyboard (hovers the mouse over the keyboard), a enlarged tooltip appears above their finger displaying which character they are currently on, and what characters are surrounding it. The user is able to adjust their finger accordingly to their desired character while the tooltip adjusts to their position. To select and input the character, the user simply lifts their finger off the screen when they reach their desired character (right click). 
 
-To increase efficiency, we also designed specific techniques for common actions like backspace or to capitalize characters. Swiping left to delete a character and swiping up or down to capitalize and lowercase the keyboard. 
+To increase efficiency, we also designed specific techniques for common actions like backspace or to capitalize characters. Swiping left (click and drag left) to delete a character and swiping up or down (click and drag up/down) to capitalize and lowercase the keyboard. 
+
+Note: Hovering over the keyboard simulates a user touching the touch screen device and clicking simulates realsing the touch screen. Also, dragging across the keyboard simulates swiping. 
+
 
 # Take the test
 
 Go to the following link to complete a test using Magniboard: https://yuliyakrav.github.io/keyboard/
+
 
 # Analyze Your Results
 

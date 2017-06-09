@@ -12,6 +12,10 @@ Using Magniboard is very simple. As soon as a user touches the keyboard, a enlar
 
 To increase efficiency, we also designed specific techniques for common actions like backspace or to capitalize characters. Swiping left to delete a character and swiping up or down to capitalize and lowercase the keyboard. 
 
+# Take the test
+
+Go to the following link to complete a test using Magniboard: https://yuliyakrav.github.io/keyboard/
+
 # Analyze Your Results
 
 Download TextTest and StreamAnalyzer from http://depts.washington.edu/ewrite/eval.html to analyze your results. 
